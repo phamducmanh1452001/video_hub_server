@@ -19,6 +19,6 @@ app.get('*', function(req, res) {
   res.sendFile('index.html', {root: '/Users/manhblue/Desktop/video_hub/public'});
 });
 
-const server = app.listen( process.env.PORT || 3000, '192.168.1.61', () => {
+const server = app.listen( process.env.PORT || 3000, () => {
     console.log('Listening on port ' + server.address().port);
 });
