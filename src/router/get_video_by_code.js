@@ -57,7 +57,7 @@ router.get('/:code', function(req, res, next) {
     });
 });
 
-const getFileFromCode = async (code, ip) => new Promise((resolve) => {
+const getFileFromCode = async (code, clientIp) => new Promise((resolve) => {
     const options = { localAddress: clientIp }
     const httpAgent = new http.Agent(options);
     const httpsAgent = new https.Agent(options);
