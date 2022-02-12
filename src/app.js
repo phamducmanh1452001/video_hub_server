@@ -16,7 +16,7 @@ app.use(require('./router'));
 app.use('/', express.static('./public'));
 
 app.get('*', function(req, res) {
-  res.sendFile('index.html', {root: '/Users/manhblue/Desktop/video_hub/public'});
+  res.sendFile('index.html', {root: './public'});
 });
 
 const server = app.listen( process.env.PORT || 3000, () => {
