@@ -86,6 +86,8 @@ const getFileFromCode = async (code) => new Promise((resolve) => {
                     files['480p'] = item.file;
                 }
             }
+        
+            resolve(files);
         });
 });
 
