@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Video = require('./Video');
 const Fux = require('./Fux');
 
-mongoose.connect('mongodb://127.0.0.1/jav2');
+mongoose.connect('mongodb://127.0.0.1/ujav');
 
 const limit = 40;
 
