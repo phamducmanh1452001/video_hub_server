@@ -78,9 +78,9 @@ const getFileFromCode = async (code) => new Promise((resolve) => {
 
             for(let i = 0; i < items.length; i++) {
                 const item = items[i];
-                if (item.label = '1080p') {
+                if (item.label == '1080p') {
                     files['1080p'] = item.file;
-                } else if (item.label = '720p') {
+                } else if (item.label == '720p') {
                     files['720p'] = item.file;
                 } else {
                     files['480p'] = item.file;
