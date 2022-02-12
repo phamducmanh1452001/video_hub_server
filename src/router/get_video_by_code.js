@@ -75,26 +75,16 @@ const getFileFromCode = async (code) => new Promise((resolve) => {
                 '720p': '',
                 '480p': '', 
             };
-            let count = 0;
 
             for(let i = 0; i < items.length; i++) {
-                request({url: items[i].file, followRedirect: false},  (error, response, body) => {
-                    if (error == null) {
-                        const location = response.headers.location;
-                        if (location.includes('1080p')) {
-                            files['1080p'] = location;
-                        } else if (location.includes('720p')) {
-                            files['720p'] = location;
-                        } else {
-                            files['480p'] = location;
-                        }
-                    }
-                    count++;
-                    if (count == items.length) {
-                        resolve(files);
-                        return;
-                    }
-                });
+                const item = items[i];
+                if (item.label = '1080p') {
+                    files['1080p'] = item.file;
+                } else if (item.label = '720p') {
+                    files['720p'] = item.file;
+                } else {
+                    files['480p'] = item.file;
+                }
             }
         });
 });
