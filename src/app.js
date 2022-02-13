@@ -20,6 +20,8 @@ app.get('*', function(req, res) {
   res.sendFile('index.html', {root: './public'});
 });
 
-const server = app.listen( process.env.PORT || 3000, () => {
+const server = app.listen( process.env.PORT || 80, () => {
     console.log('Listening on port ' + server.address().port);
 });
+// mongoimport --db ujav --collection videos --file videos.json
+// mongoimport --db ujav --collection fuxes --file fuxes.json
