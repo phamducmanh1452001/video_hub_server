@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 var cors = require('cors')
 const app = express();
+
 // debug middle
 // app.use('/api', (req, res, next) => {
 //   console.log(req.path);
