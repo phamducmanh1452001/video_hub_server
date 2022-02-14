@@ -100,7 +100,6 @@ const getFuxByCode = async (code) => new Promise((resolve) => {
             console.log(err);
             resolve(undefined);
         } else {
-            console.log(fux);
             resolve(fux == null ? undefined : fux);
         }
     });
