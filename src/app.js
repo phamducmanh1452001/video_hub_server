@@ -14,6 +14,20 @@ app.use('/api', (req, res, next) => {
   next();
 });
 
+const isSecure = (req) => {
+  if (req.headers['x-forwarded-proto']) {
+    return req.headers['x-forwarded-proto'] === 'https';
+  }
+  return req.secure;
+};
+
+app.use((req, res, next) => {
+  if (!isSecure(req)) {
+    res.redirect(301, `https://${req.headers.host}${req.url}`);
+  } else {
+    next();
+  }
+});
 // default middleware
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -24,6 +38,10 @@ app.use('/', express.static('./public'));
 
 app.get('*', function(req, res) {
   res.sendFile('index.html', {root: './public'});
+});
+
+app.listen(80, () => {
+  console.log('Listening on port ' + server.address().port);
 });
 
 const server = https.createServer(credentials, app);
