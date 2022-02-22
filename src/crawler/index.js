@@ -5,17 +5,15 @@ const { saveVideoItemToDB } = require('../dbcontainer');
 module.exports = {
     getVideoItemsByHomePage,
     getSmartShareLinkByItemLink,
-    getOriginLinkFromSmartShare
+    getOriginLinkFromSmartShare,
+    crawl
 };
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-crawler();
-
-
-function crawler() {
+function crawl() {
     console.log('crawling...');
     getVideoItemsByHomePage(1)
     .then((items) => {

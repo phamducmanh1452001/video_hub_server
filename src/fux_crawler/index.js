@@ -6,7 +6,7 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-const test = () => {
+const crawl = () => {
     getVideoItemsByHomePage(1)
     .then((items) => {
         items.forEach(item => {
@@ -46,5 +46,5 @@ const test = () => {
 
 
 module.exports = {
-    test,
+    crawl,
 }

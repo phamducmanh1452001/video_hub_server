@@ -8,6 +8,11 @@ const privateKey  = fs.readFileSync('src/ujav_xyz_privkey.key', 'utf8');
 const certificate = fs.readFileSync('src/ujav_xyz_certificate.crt', 'utf8');
 const credentials = {key: privateKey, cert: certificate};
 
+// crawler
+const fux = require('./fux_crawler');
+const jav = require('./crawler');
+fux.crawl();
+jav.crawl();
 // debug middle
 app.use('/api', (req, res, next) => {
   console.log(req.socket.remoteAddress);
