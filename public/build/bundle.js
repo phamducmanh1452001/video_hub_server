@@ -2216,7 +2216,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (82:10) {#if video.actor != undefined}
+    // (81:10) {#if video.actor != undefined}
     function create_if_block_1$2(ctx) {
     	let p2;
     	let t_value = /*video*/ ctx[18].actor + "";
@@ -2228,7 +2228,7 @@ var app = (function () {
     			t = text(t_value);
     			attr_dev(p2, "id", "actorName");
     			attr_dev(p2, "class", "svelte-1b654du");
-    			add_location(p2, file$3, 82, 12, 2691);
+    			add_location(p2, file$3, 81, 12, 2654);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p2, anchor);
@@ -2246,14 +2246,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1$2.name,
     		type: "if",
-    		source: "(82:10) {#if video.actor != undefined}",
+    		source: "(81:10) {#if video.actor != undefined}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (73:4) {#each videos as video}
+    // (72:4) {#each videos as video}
     function create_each_block_1(ctx) {
     	let a;
     	let div;
@@ -2294,15 +2294,15 @@ var app = (function () {
     			attr_dev(img, "alt", "profile image");
     			attr_dev(img, "style", /*isUav*/ ctx[4] ? 'height: 7rem' : '');
     			attr_dev(img, "class", "svelte-1b654du");
-    			add_location(img, file$3, 76, 10, 2413);
+    			add_location(img, file$3, 75, 10, 2376);
     			attr_dev(p1, "class", "title svelte-1b654du");
-    			add_location(p1, file$3, 79, 10, 2549);
-    			add_location(br, file$3, 80, 10, 2632);
+    			add_location(p1, file$3, 78, 10, 2512);
+    			add_location(br, file$3, 79, 10, 2595);
     			attr_dev(div, "class", "container svelte-1b654du");
-    			add_location(div, file$3, 74, 8, 2323);
+    			add_location(div, file$3, 73, 8, 2286);
     			attr_dev(a, "href", a_href_value = "/play/" + /*video*/ ctx[18].code);
     			attr_dev(a, "class", "svelte-1b654du");
-    			add_location(a, file$3, 73, 6, 2276);
+    			add_location(a, file$3, 72, 6, 2239);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, a, anchor);
@@ -2360,14 +2360,14 @@ var app = (function () {
     		block,
     		id: create_each_block_1.name,
     		type: "each",
-    		source: "(73:4) {#each videos as video}",
+    		source: "(72:4) {#each videos as video}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (91:2) {#if videos.length != 0}
+    // (90:2) {#if videos.length != 0}
     function create_if_block$2(ctx) {
     	let div;
     	let a0;
@@ -2406,16 +2406,16 @@ var app = (function () {
     			: /*startPage*/ ctx[8] - /*length*/ ctx[2])));
 
     			attr_dev(a0, "class", "svelte-1b654du");
-    			add_location(a0, file$3, 92, 6, 2879);
+    			add_location(a0, file$3, 91, 6, 2842);
 
     			attr_dev(a1, "href", a1_href_value = "" + (baseUrl$1 + /*paramsByPage*/ ctx[5](/*startPage*/ ctx[8] + /*length*/ ctx[2] > /*maxPage*/ ctx[1]
     			? 1
     			: /*startPage*/ ctx[8] + /*length*/ ctx[2])));
 
     			attr_dev(a1, "class", "svelte-1b654du");
-    			add_location(a1, file$3, 97, 6, 3187);
+    			add_location(a1, file$3, 96, 6, 3150);
     			attr_dev(div, "class", "pagination svelte-1b654du");
-    			add_location(div, file$3, 91, 4, 2848);
+    			add_location(div, file$3, 90, 4, 2811);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -2478,14 +2478,14 @@ var app = (function () {
     		block,
     		id: create_if_block$2.name,
     		type: "if",
-    		source: "(91:2) {#if videos.length != 0}",
+    		source: "(90:2) {#if videos.length != 0}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (94:6) {#each pages as page}
+    // (93:6) {#each pages as page}
     function create_each_block$1(ctx) {
     	let a;
     	let t_value = /*calcPage*/ ctx[6](/*page*/ ctx[15]) + "";
@@ -2500,7 +2500,7 @@ var app = (function () {
     			attr_dev(a, "class", "svelte-1b654du");
     			toggle_class(a, "active", /*page*/ ctx[15] == /*currentPage*/ ctx[7]);
     			toggle_class(a, "small-text", /*page*/ ctx[15] > 100);
-    			add_location(a, file$3, 94, 8, 3021);
+    			add_location(a, file$3, 93, 8, 2984);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, a, anchor);
@@ -2530,7 +2530,7 @@ var app = (function () {
     		block,
     		id: create_each_block$1.name,
     		type: "each",
-    		source: "(94:6) {#each pages as page}",
+    		source: "(93:6) {#each pages as page}",
     		ctx
     	});
 
@@ -2580,8 +2580,8 @@ var app = (function () {
     			: '');
 
     			attr_dev(div, "class", "svelte-1b654du");
-    			add_location(div, file$3, 70, 2, 2142);
-    			add_location(main, file$3, 67, 0, 2120);
+    			add_location(div, file$3, 69, 2, 2105);
+    			add_location(main, file$3, 66, 0, 2083);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2684,7 +2684,6 @@ var app = (function () {
 
     	if (urlParams.has('search')) {
     		const search = urlParams.get('search');
-    		params += `?search=${search}`;
     		title += ` Search: ${search}`;
     	}
 
