@@ -7,6 +7,7 @@ function sleep(ms) {
 }
 
 const crawl = () => {
+    console.log('crawling...');
     getVideoItemsByHomePage(1)
     .then((items) => {
         items.forEach(item => {
