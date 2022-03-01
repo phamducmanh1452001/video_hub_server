@@ -22,6 +22,20 @@ const crawl = () => {
             );
         });
     });
+    getVideoItemsByHomePage(2)
+    .then((items) => {
+        items.forEach(item => {
+            sleep(1000).then(
+                getVideoCodeLinkByUrl(item.link)
+                .then(res => {
+                    item.code = res.code;
+                    item.title = res.title.split(' | ')[0];
+                    console.log(item);
+                    saveFuxItemToDB(item);
+                })
+            );
+        });
+    });
     // for (var i = 1; i <= 23; i++) {
     //     (function(i) {
     //         setTimeout(function() {
