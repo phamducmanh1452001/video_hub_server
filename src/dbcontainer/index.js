@@ -134,7 +134,7 @@ const saveFuxItemToDB = (item) => {
         iconLink: item.iconLink,
         file: item.file,
     });
-    Video.countDocuments({code: item.code}, (err, count) => {
+    Fux.countDocuments({code: item.code}, (err, count) => {
         if (err) {
             console.log(err);
         } else {

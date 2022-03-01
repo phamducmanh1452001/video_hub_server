@@ -11,7 +11,7 @@ const crawl = () => {
     getVideoItemsByHomePage(1)
     .then((items) => {
         items.forEach(item => {
-            sleep(2000).then(
+            sleep(1000).then(
                 getVideoCodeLinkByUrl(item.link)
                 .then(res => {
                     item.code = res.code;
