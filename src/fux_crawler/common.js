@@ -11,7 +11,7 @@ const fetchHtml = (method, url, payload = undefined) => new Promise((resolve) =>
         }
     ).on('error', (e) => {
         console.error(e);
-        throw new Error('Cannot get uav by code');        
+        // throw new Error('Cannot get uav by code');        
     });
 });
 
